@@ -2,7 +2,7 @@ let order = [];
 let clickedOrder = [];
 let score = 0;
 
-//Cores
+//Cores dos eventos de clique
 //0 - verde
 //1 - vermelho
 //2 - amarelo
@@ -13,7 +13,7 @@ const red = document.querySelector('.red');
 const green = document.querySelector('.green');
 const yellow = document.querySelector('.yellow');
 
-//Cria ordem aleatória de cores 
+//Função que cria ordem aleatória de cores
 let shuffleOrder = () => {
     let colorOrder = Math.floor(Math.random() * 4);
     order[order.length] = colorOrder;
@@ -25,7 +25,7 @@ let shuffleOrder = () => {
     }
 }
 
-//Acende a próxima cor
+//Função que acende a próxima cor
 let lightColor = (element, number) => {
     number = number * 500;
     setTimeout(() => {
@@ -36,7 +36,7 @@ let lightColor = (element, number) => {
     });
 }
 
-//Checa se os botões clicados são os mesmos da ordem gerada no jogo
+//Função que checa se os botões clicados são os mesmos da ordem gerada no jogo
 let checkOrder = () => {
     for (let i in clickedOrder) {
         if (clickedOrder[i] != order[i]) {
@@ -91,7 +91,7 @@ let gameOver = () => {
 
 //Função de início do jogo
 let playGame = () => {
-    alert('Bem vindo ao Gênesis! Iniciando novo jogo!');
+    alert('Bem vindo ao Genius! Iniciando novo jogo!');
     score = 0;
 
     nextLevel();
